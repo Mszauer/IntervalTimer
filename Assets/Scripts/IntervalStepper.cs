@@ -13,6 +13,7 @@ public class IntervalStepper : MonoBehaviour {
     int stepperValue = 0;
     int totalSecVal = 0;
     int totalMinVal = 0;
+    int rounds = 1;
 
     public void IncreaseStepper() {
         totalSecVal = System.Convert.ToInt32(totalTimeSec.text);
@@ -47,5 +48,14 @@ public class IntervalStepper : MonoBehaviour {
         }
         totalTimeSec.text = totalSecVal.ToString("D2");
         totalTimeMin.text = totalMinVal.ToString();
+    }
+    public void IncreaseRounds() {
+        rounds++;
+        int roundSec = totalSecVal * rounds;
+        int roundMin = totalMinVal * rounds + (roundSec/60);
+        roundSec -= (roundSec / 60);
+        timer.text = rounds.ToString();
+        totalTimeSec.text = roundSec.ToString("D2");
+        totalTimeMin.text = roundMin.ToString();
     }
 }
