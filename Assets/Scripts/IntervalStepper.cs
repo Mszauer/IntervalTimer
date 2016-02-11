@@ -25,7 +25,6 @@ public class IntervalStepper : MonoBehaviour {
     int rounds = 1;
 
     public void IncreaseStepper() {
-        totalSecVal = System.Convert.ToInt32(totalTimeSec.text);
         if (stepperValue < maxValue) {
             stepperValue += deltaStepper;
             totalSecVal += deltaStepper;
