@@ -378,7 +378,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 361882136}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1761511134}
+        m_MethodName: IncreaseRounds
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &361882136
@@ -644,7 +655,7 @@ GameObject:
   - 222: {fileID: 545151752}
   - 114: {fileID: 545151751}
   m_Layer: 0
-  m_Name: Text
+  m_Name: Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -960,6 +971,7 @@ GameObject:
   - 224: {fileID: 647932062}
   - 222: {fileID: 647932064}
   - 114: {fileID: 647932063}
+  - 114: {fileID: 647932065}
   m_Layer: 0
   m_Name: Work
   m_TagString: Untagged
@@ -1021,6 +1033,21 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 647932061}
+--- !u!114 &647932065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 647932061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96bc7c0bf13f80e45aa61b68426845fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: {fileID: 1872883554}
+  totalTimeSec: {fileID: 120291774}
+  totalTimeMin: {fileID: 730058966}
+  deltaStepper: 5
 --- !u!1 &649137541
 GameObject:
   m_ObjectHideFlags: 0
@@ -1095,7 +1122,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 649137544}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1104285694}
+        m_MethodName: DecreaseStepper
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &649137544
@@ -1491,7 +1529,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1087293799}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 647932065}
+        m_MethodName: IncreaseStepper
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1087293799
@@ -1537,6 +1586,7 @@ GameObject:
   - 224: {fileID: 1104285691}
   - 222: {fileID: 1104285693}
   - 114: {fileID: 1104285692}
+  - 114: {fileID: 1104285694}
   m_Layer: 0
   m_Name: Rest
   m_TagString: Untagged
@@ -1598,6 +1648,21 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1104285690}
+--- !u!114 &1104285694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1104285690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96bc7c0bf13f80e45aa61b68426845fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: {fileID: 1184673585}
+  totalTimeSec: {fileID: 120291774}
+  totalTimeMin: {fileID: 730058966}
+  deltaStepper: 5
 --- !u!1 &1161788785
 GameObject:
   m_ObjectHideFlags: 0
@@ -1676,7 +1741,7 @@ GameObject:
   - 222: {fileID: 1184673586}
   - 114: {fileID: 1184673585}
   m_Layer: 0
-  m_Name: Text (1)
+  m_Name: Timer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1922,7 +1987,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1257494126}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 647932065}
+        m_MethodName: DecreaseStepper
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1257494126
@@ -2140,6 +2216,7 @@ GameObject:
   - 224: {fileID: 1370135208}
   - 222: {fileID: 1370135210}
   - 114: {fileID: 1370135209}
+  - 114: {fileID: 1370135211}
   m_Layer: 0
   m_Name: CoolDown
   m_TagString: Untagged
@@ -2165,7 +2242,7 @@ RectTransform:
   m_RootOrder: 6
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -123, y: -243.00006}
+  m_AnchoredPosition: {x: -123, y: -143.00003}
   m_SizeDelta: {x: 345, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1370135209
@@ -2201,6 +2278,21 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1370135207}
+--- !u!114 &1370135211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1370135207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96bc7c0bf13f80e45aa61b68426845fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: {fileID: 1391456142}
+  totalTimeSec: {fileID: 120291774}
+  totalTimeMin: {fileID: 730058966}
+  deltaStepper: 5
 --- !u!1 &1391456140
 GameObject:
   m_ObjectHideFlags: 0
@@ -2212,7 +2304,7 @@ GameObject:
   - 222: {fileID: 1391456143}
   - 114: {fileID: 1391456142}
   m_Layer: 0
-  m_Name: Text (1)
+  m_Name: Timer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2358,7 +2450,7 @@ GameObject:
   - 222: {fileID: 1404513119}
   - 114: {fileID: 1404513118}
   m_Layer: 0
-  m_Name: Text
+  m_Name: Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2494,7 +2586,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1452112458}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1370135211}
+        m_MethodName: DecreaseStepper
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1452112458
@@ -2604,7 +2707,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1468264054}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1104285694}
+        m_MethodName: IncreaseStepper
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1468264054
@@ -2835,7 +2949,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1626605505}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1370135211}
+        m_MethodName: IncreaseStepper
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1626605505
@@ -3029,6 +3154,7 @@ GameObject:
   - 224: {fileID: 1761511131}
   - 222: {fileID: 1761511133}
   - 114: {fileID: 1761511132}
+  - 114: {fileID: 1761511134}
   m_Layer: 0
   m_Name: Rounds
   m_TagString: Untagged
@@ -3054,7 +3180,7 @@ RectTransform:
   m_RootOrder: 5
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -123, y: -143.00006}
+  m_AnchoredPosition: {x: -123, y: -243.00006}
   m_SizeDelta: {x: 345, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1761511132
@@ -3090,6 +3216,21 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1761511130}
+--- !u!114 &1761511134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1761511130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96bc7c0bf13f80e45aa61b68426845fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: {fileID: 1825086873}
+  totalTimeSec: {fileID: 120291774}
+  totalTimeMin: {fileID: 730058966}
+  deltaStepper: 5
 --- !u!1 &1821946031
 GameObject:
   m_ObjectHideFlags: 0
@@ -3174,7 +3315,7 @@ GameObject:
   - 222: {fileID: 1825086874}
   - 114: {fileID: 1825086873}
   m_Layer: 0
-  m_Name: Text (1)
+  m_Name: Timer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3229,7 +3370,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: 1
 --- !u!222 &1825086874
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3247,7 +3388,7 @@ GameObject:
   - 222: {fileID: 1872883555}
   - 114: {fileID: 1872883554}
   m_Layer: 0
-  m_Name: Text (1)
+  m_Name: Timer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

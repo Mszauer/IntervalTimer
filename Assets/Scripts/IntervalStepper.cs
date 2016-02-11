@@ -7,14 +7,19 @@ public class IntervalStepper : MonoBehaviour {
     public Text totalTimeSec;
     public Text totalTimeMin;
 
-    public int deltaStepper = 5;
+    int deltaStepper = 5;
     int maxValue = 960;
     int minValue = 0;
     int stepperValue = 0;
     int totalSecVal = 0;
     int totalMinVal {
         get {
-            return (totalSecVal % 3600) / 60;
+            return (totalSecVal) / 60;
+        }
+    }
+    int displaySecVal {
+        get {
+            return (totalSecVal-(totalMinVal*60));
         }
     }
     int rounds = 1;
@@ -26,7 +31,7 @@ public class IntervalStepper : MonoBehaviour {
             totalSecVal += deltaStepper;
         }
         timer.text = stepperValue.ToString();
-        totalTimeSec.text = totalSecVal.ToString("D2");
+        totalTimeSec.text = displaySecVal.ToString("D2");
         totalTimeMin.text = totalMinVal.ToString();
     }
     public void DecreaseStepper() {
@@ -35,7 +40,7 @@ public class IntervalStepper : MonoBehaviour {
             totalSecVal -= deltaStepper;
         }
         timer.text = stepperValue.ToString();
-        totalTimeSec.text = totalSecVal.ToString("D2");
+        totalTimeSec.text = displaySecVal.ToString("D2");
         totalTimeMin.text = totalMinVal.ToString();
     }
     public void IncreaseRounds() {
