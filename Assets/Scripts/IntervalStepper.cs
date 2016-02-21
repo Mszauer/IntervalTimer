@@ -44,7 +44,8 @@ public class IntervalStepper : MonoBehaviour {
     }
     public void IncreaseRounds() {
         rounds++;
-        float roundSeconds = totalSecVal * rounds;
+        totalSecVal *= rounds;
         timer.text = rounds.ToString();
+        totalTimeSec.text = displaySecVal.ToString("D2");
     }
 }
