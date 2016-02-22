@@ -4,24 +4,13 @@ using UnityEngine.UI;
 
 public class IntervalStepper : MonoBehaviour {
     public Text timer;
-    public Text totalTimeSec;
-    public Text totalTimeMin;
+    public Text TotalTime;
 
     int deltaStepper = 5;
     int maxValue = 960;
     int minValue = 0;
     int stepperValue = 0;
     int totalSecVal = 0;
-    int totalMinVal {
-        get {
-            return (totalSecVal) / 60;
-        }
-    }
-    int displaySecVal {
-        get {
-            return (totalSecVal-(totalMinVal*60));
-        }
-    }
     int rounds = 1;
 
     public void IncreaseStepper() {
@@ -30,8 +19,9 @@ public class IntervalStepper : MonoBehaviour {
             totalSecVal += deltaStepper;
         }
         timer.text = stepperValue.ToString();
-        totalTimeSec.text = displaySecVal.ToString("D2");
-        totalTimeMin.text = totalMinVal.ToString();
+        int minutes = totalSecVal / 60 * rounds;
+        int seconds = totalSecVal - (minutes * 60);
+        TotalTime.text = minutes.ToString("D2") + " : " + seconds.ToString("D2");
     }
     public void DecreaseStepper() {
         if (stepperValue > minValue) {
@@ -39,13 +29,16 @@ public class IntervalStepper : MonoBehaviour {
             totalSecVal -= deltaStepper;
         }
         timer.text = stepperValue.ToString();
-        totalTimeSec.text = displaySecVal.ToString("D2");
-        totalTimeMin.text = totalMinVal.ToString();
+        int minutes = totalSecVal / 60 * rounds;
+        int seconds = totalSecVal - (minutes * 60);
+        TotalTime.text = minutes.ToString("D2") + " : " + seconds.ToString("D2");
     }
     public void IncreaseRounds() {
         rounds++;
         totalSecVal *= rounds;
-        timer.text = rounds.ToString();
-        totalTimeSec.text = displaySecVal.ToString("D2");
+        timer.text = stepperValue.ToString();
+        int minutes = totalSecVal / 60 * rounds;
+        int seconds = totalSecVal - (minutes * 60);
+        TotalTime.text = minutes.ToString("D2") + " : " + seconds.ToString("D2");
     }
 }
