@@ -279,7 +279,7 @@ GameObject:
   - 222: {fileID: 120291775}
   - 114: {fileID: 120291774}
   m_Layer: 0
-  m_Name: Seconds
+  m_Name: Time
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -296,11 +296,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2077963665}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 85, y: 0.99998}
-  m_SizeDelta: {x: 99, y: 83}
+  m_AnchoredPosition: {x: 65.25, y: 0.99998}
+  m_SizeDelta: {x: 194.5, y: 83}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &120291774
 MonoBehaviour:
@@ -765,7 +765,7 @@ GameObject:
   - 222: {fileID: 539387468}
   - 114: {fileID: 539387467}
   m_Layer: 0
-  m_Name: Text
+  m_Name: Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1046,7 +1046,7 @@ GameObject:
   - 114: {fileID: 600120691}
   - 114: {fileID: 600120690}
   m_Layer: 0
-  m_Name: Button
+  m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1349,8 +1349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 1872883554}
-  totalTimeSec: {fileID: 120291774}
-  totalTimeMin: {fileID: 730058966}
+  TotalTime: {fileID: 120291774}
 --- !u!1 &649137541
 GameObject:
   m_ObjectHideFlags: 0
@@ -1612,79 +1611,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 709491386}
---- !u!1 &730058964
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 224: {fileID: 730058965}
-  - 222: {fileID: 730058967}
-  - 114: {fileID: 730058966}
-  m_Layer: 0
-  m_Name: Minutes
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &730058965
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 730058964}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2077963665}
-  m_RootOrder: 1
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000014305115, y: 0.9999809}
-  m_SizeDelta: {x: 75, y: 83}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &730058966
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 730058964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 50
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 5
-    m_MaxSize: 50
-    m_Alignment: 5
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 0
---- !u!222 &730058967
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 730058964}
 --- !u!1 &817739286
 GameObject:
   m_ObjectHideFlags: 0
@@ -2178,8 +2104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 1184673585}
-  totalTimeSec: {fileID: 120291774}
-  totalTimeMin: {fileID: 730058966}
+  TotalTime: {fileID: 120291774}
 --- !u!1 &1161788785
 GameObject:
   m_ObjectHideFlags: 0
@@ -2394,7 +2319,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1225586693}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1761511134}
+        m_MethodName: DecreaseRounds
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1225586693
@@ -2772,8 +2708,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 817739288}
-  totalTimeSec: {fileID: 0}
-  totalTimeMin: {fileID: 1525336527}
+  TotalTime: {fileID: 0}
 --- !u!114 &1325761746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2891,8 +2826,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 1391456142}
-  totalTimeSec: {fileID: 120291774}
-  totalTimeMin: {fileID: 730058966}
+  TotalTime: {fileID: 120291774}
 --- !u!1 &1391456140
 GameObject:
   m_ObjectHideFlags: 0
@@ -3476,8 +3410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 1659155834}
-  totalTimeSec: {fileID: 0}
-  totalTimeMin: {fileID: 1525336527}
+  TotalTime: {fileID: 0}
 --- !u!114 &1494743942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4234,8 +4167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 346449642}
-  totalTimeSec: {fileID: 0}
-  totalTimeMin: {fileID: 1525336527}
+  TotalTime: {fileID: 0}
 --- !u!114 &1710111178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4428,8 +4360,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 1825086873}
-  totalTimeSec: {fileID: 120291774}
-  totalTimeMin: {fileID: 730058966}
+  TotalTime: {fileID: 120291774}
 --- !u!1 &1801822286
 GameObject:
   m_ObjectHideFlags: 0
@@ -4497,79 +4428,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1801822286}
---- !u!1 &1821946031
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 224: {fileID: 1821946032}
-  - 222: {fileID: 1821946034}
-  - 114: {fileID: 1821946033}
-  m_Layer: 0
-  m_Name: ':'
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1821946032
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1821946031}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2077963665}
-  m_RootOrder: 2
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 52.000015, y: 4}
-  m_SizeDelta: {x: 33, y: 89}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1821946033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1821946031}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 60
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 70
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 1
-    m_LineSpacing: 1
-  m_Text: ':'
---- !u!222 &1821946034
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1821946031}
 --- !u!1 &1825086871
 GameObject:
   m_ObjectHideFlags: 0
@@ -5315,8 +5173,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 539387466}
-  - {fileID: 730058965}
-  - {fileID: 1821946032}
   - {fileID: 120291773}
   m_Father: {fileID: 1324173111}
   m_RootOrder: 7
@@ -5460,7 +5316,7 @@ MonoBehaviour:
   TimerScene: {fileID: 619591409}
   TimerScreen: {fileID: 619591410}
   totalTimeSec: {fileID: 120291774}
-  totalTimeMin: {fileID: 730058966}
+  totalTimeMin: {fileID: 0}
 --- !u!1 &2124064388
 GameObject:
   m_ObjectHideFlags: 0
@@ -5545,5 +5401,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 1921671853}
-  totalTimeSec: {fileID: 120291774}
-  totalTimeMin: {fileID: 730058966}
+  TotalTime: {fileID: 120291774}

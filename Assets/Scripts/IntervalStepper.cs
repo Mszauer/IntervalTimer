@@ -10,8 +10,8 @@ public class IntervalStepper : MonoBehaviour {
     int maxValue = 960;
     int minValue = 0;
     int stepperValue = 0;
-    int totalSecVal = 0;
-    int rounds = 1;
+    static int totalSecVal = 0;
+    static int rounds = 1;
 
     public void IncreaseStepper() {
         if (stepperValue < maxValue) {
@@ -19,7 +19,7 @@ public class IntervalStepper : MonoBehaviour {
             totalSecVal += deltaStepper;
         }
         timer.text = stepperValue.ToString();
-        int minutes = totalSecVal / 60 * rounds;
+        int minutes = (totalSecVal / 60);
         int seconds = totalSecVal - (minutes * 60);
         TotalTime.text = minutes.ToString("D2") + " : " + seconds.ToString("D2");
     }
@@ -29,16 +29,27 @@ public class IntervalStepper : MonoBehaviour {
             totalSecVal -= deltaStepper;
         }
         timer.text = stepperValue.ToString();
-        int minutes = totalSecVal / 60 * rounds;
+        int minutes = (totalSecVal / 60);
         int seconds = totalSecVal - (minutes * 60);
         TotalTime.text = minutes.ToString("D2") + " : " + seconds.ToString("D2");
     }
     public void IncreaseRounds() {
         rounds++;
-        totalSecVal *= rounds;
-        timer.text = stepperValue.ToString();
-        int minutes = totalSecVal / 60 * rounds;
-        int seconds = totalSecVal - (minutes * 60);
+        int localtotalSecVal = totalSecVal * rounds;
+        timer.text = rounds.ToString();
+        int minutes = (localtotalSecVal / 60);
+        int seconds = localtotalSecVal - (minutes * 60);
+        TotalTime.text = minutes.ToString("D2") + " : " + seconds.ToString("D2");
+    }
+    public void DecreaseRounds() {
+        rounds--;
+        if (rounds <= 0) {
+            rounds = 1;
+        }
+        int localtotalSecVal = totalSecVal * rounds;
+        timer.text = rounds.ToString();
+        int minutes = (localtotalSecVal / 60);
+        int seconds = localtotalSecVal - (minutes * 60);
         TotalTime.text = minutes.ToString("D2") + " : " + seconds.ToString("D2");
     }
 }
