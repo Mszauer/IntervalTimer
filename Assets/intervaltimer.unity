@@ -425,7 +425,7 @@ GameObject:
   - 222: {fileID: 346449643}
   - 114: {fileID: 346449642}
   m_Layer: 0
-  m_Name: Timer
+  m_Name: RestTimer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1173,7 +1173,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &619591410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1186,6 +1186,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TotalTime: {fileID: 1525336527}
+  Rounds: {fileID: 346449642}
+  Work: {fileID: 817739288}
 --- !u!114 &619591411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1622,7 +1624,7 @@ GameObject:
   - 222: {fileID: 817739289}
   - 114: {fileID: 817739288}
   m_Layer: 0
-  m_Name: Timer
+  m_Name: WorkTimer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1863,7 +1865,7 @@ RectTransform:
   m_RootOrder: 5
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -337}
+  m_AnchoredPosition: {x: 0, y: -234}
   m_SizeDelta: {x: 342, y: 107}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1048863488
@@ -2577,7 +2579,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1324173111
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2669,7 +2671,6 @@ GameObject:
   - 224: {fileID: 1325761744}
   - 222: {fileID: 1325761747}
   - 114: {fileID: 1325761746}
-  - 114: {fileID: 1325761745}
   m_Layer: 0
   m_Name: Work
   m_TagString: Untagged
@@ -2693,22 +2694,9 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -123, y: 56.99996}
+  m_AnchoredPosition: {x: 1.5, y: 153}
   m_SizeDelta: {x: 345, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1325761745
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1325761743}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96bc7c0bf13f80e45aa61b68426845fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timer: {fileID: 817739288}
-  TotalTime: {fileID: 0}
 --- !u!114 &1325761746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3122,7 +3110,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1370135211}
-        m_MethodName: DecreaseStepper
+        m_MethodName: DecreaseCoolDown
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3371,7 +3359,6 @@ GameObject:
   - 224: {fileID: 1494743940}
   - 222: {fileID: 1494743943}
   - 114: {fileID: 1494743942}
-  - 114: {fileID: 1494743941}
   m_Layer: 0
   m_Name: Rounds
   m_TagString: Untagged
@@ -3395,22 +3382,9 @@ RectTransform:
   m_RootOrder: 4
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -123, y: -243.00006}
+  m_AnchoredPosition: {x: 1.5, y: -79}
   m_SizeDelta: {x: 345, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1494743941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1494743939}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96bc7c0bf13f80e45aa61b68426845fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timer: {fileID: 1659155834}
-  TotalTime: {fileID: 0}
 --- !u!114 &1494743942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3593,7 +3567,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2124064392}
-        m_MethodName: DecreaseStepper
+        m_MethodName: DecreaseWarmup
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3927,7 +3901,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1370135211}
-        m_MethodName: IncreaseStepper
+        m_MethodName: IncreaseCoolDown
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4128,7 +4102,6 @@ GameObject:
   - 224: {fileID: 1710111176}
   - 222: {fileID: 1710111179}
   - 114: {fileID: 1710111178}
-  - 114: {fileID: 1710111177}
   m_Layer: 0
   m_Name: Rest
   m_TagString: Untagged
@@ -4152,22 +4125,9 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -123, y: -43.00003}
+  m_AnchoredPosition: {x: 1.5, y: 39}
   m_SizeDelta: {x: 345, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1710111177
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1710111175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96bc7c0bf13f80e45aa61b68426845fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timer: {fileID: 346449642}
-  TotalTime: {fileID: 0}
 --- !u!114 &1710111178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4881,7 +4841,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2124064392}
-        m_MethodName: IncreaseStepper
+        m_MethodName: IncreaseWarmup
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

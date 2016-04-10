@@ -17,6 +17,6 @@ public class ScreenChanger : MonoBehaviour {
         StartScreen.SetActive(false);
         TimerScene.SetActive(true);
         int totalSeconds = System.Convert.ToInt32(totalTimeSec.text) + (System.Convert.ToInt32(totalTimeMin.text) * 60);
-        TimerScreen.TimeFinished = System.DateTime.UtcNow.AddSeconds(totalSeconds);
+        TimerScreen.TimeLeft = System.DateTime.UtcNow.AddSeconds(totalSeconds);
     }
 }
