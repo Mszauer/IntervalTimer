@@ -16,6 +16,11 @@ public class IntervalStepper : MonoBehaviour {
     static int coolDown = 0;
     public static int rest = 0;
     public static int work = 0;
+    public static int totalTime {
+        get {
+            return (totalSecVal * rounds) + warmUp + coolDown;
+        }
+    }
 
     public void IncreaseWarmup() {
         if (stepperValue < maxValue) {

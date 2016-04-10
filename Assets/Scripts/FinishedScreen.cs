@@ -23,5 +23,13 @@ public class FinishedScreen : MonoBehaviour{
             Rest.text = value.ToString("D2");
         }
     }
+    public int rounds {
+        get {
+            return System.Convert.ToInt32(Rounds.text);
+        }
+        set {
+            Rounds.text = value.ToString("D2");
+        }
+    }
 }
 
