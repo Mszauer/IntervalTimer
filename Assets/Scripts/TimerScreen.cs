@@ -37,10 +37,16 @@ public class TimerScreen : MonoBehaviour {
     public System.DateTime TimeFinished { get; set; }
 
     public void Update() {
-        //seconds of rest
         //seconds work
+        //subtract one from the value each second (apply dTime to stabalize)
+        //once it hits 0, start rest timer
+        //seconds of rest
+        //subtract one from the value each second (apply dTime to stabalize)
+        //once it hits 0, decrement round by 1
+        //once round gets decremented, set seconds work and rest to default values
         int DisplaySeconds = (TimeFinished - System.DateTime.UtcNow).Seconds;
         int DisplayMinutes = (TimeFinished - System.DateTime.UtcNow).Minutes;
         TotalTime.text = DisplayMinutes.ToString("D2") +" : "+ DisplaySeconds.ToString("D2");
     }
+
 }
