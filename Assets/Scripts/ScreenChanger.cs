@@ -3,17 +3,23 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class ScreenChanger : MonoBehaviour {
-    public GameObject StartScreen = null;
+    public GameObject StartScene = null;
+    public TimerScreen StartScreen = null;
+
     public GameObject TimerScene = null;
     public TimerScreen TimerScreen = null;
+
+    public GameObject FinishedScene = null;
+    public TimerScreen FinishedScreen = null;
+
     public Text totalTimeSec;
 
     public void Awake() {
-        StartScreen.SetActive(true);
+        StartScene.SetActive(true);
         TimerScene.SetActive(false);
     }
     public void StartClicked() {
-        StartScreen.SetActive(false);
+        StartScene.SetActive(false);
         TimerScene.SetActive(true);
         TimerScreen.rest = IntervalStepper.rest;
         TimerScreen.work = IntervalStepper.work;
@@ -25,5 +31,10 @@ public class ScreenChanger : MonoBehaviour {
         int sec = System.Convert.ToInt32(splitTime[1]);
         int totalSeconds = sec + (min * 60);
         TimerScreen.TimeFinished = System.DateTime.UtcNow.AddSeconds(totalSeconds);
+    }
+    public void HomeClicked() {
+        TimerScene.SetActive(false);
+        StartScene.SetActive(true);
+
     }
 }
