@@ -11,9 +11,11 @@ public class IntervalStepper : MonoBehaviour {
     int minValue = 0;
     int stepperValue = 0;
     static int totalSecVal = 0;
-    static int rounds = 1;
+    public static int rounds = 1;
     static int warmUp = 0;
     static int coolDown = 0;
+    public static int rest = 0;
+    public static int work = 0;
 
     public void IncreaseWarmup() {
         if (stepperValue < maxValue) {
@@ -58,6 +60,12 @@ public class IntervalStepper : MonoBehaviour {
         int minutes = (localtotalSecVal / 60);
         int seconds = localtotalSecVal - (minutes * 60);
         TotalTime.text = minutes.ToString("D2") + " : " + seconds.ToString("D2");
+    }
+    public void SetWork() {
+        work = stepperValue;
+    }
+    public void SetRest() {
+        rest = stepperValue;
     }
     public void IncreaseStepper() {
         if (stepperValue < maxValue) {

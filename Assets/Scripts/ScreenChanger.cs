@@ -7,7 +7,6 @@ public class ScreenChanger : MonoBehaviour {
     public GameObject TimerScene = null;
     public TimerScreen TimerScreen = null;
     public Text totalTimeSec;
-    public Text totalTimeMin;
 
     public void Awake() {
         StartScreen.SetActive(true);
@@ -16,7 +15,15 @@ public class ScreenChanger : MonoBehaviour {
     public void StartClicked() {
         StartScreen.SetActive(false);
         TimerScene.SetActive(true);
-        int totalSeconds = System.Convert.ToInt32(totalTimeSec.text) + (System.Convert.ToInt32(totalTimeMin.text) * 60);
-        TimerScreen.TimeLeft = System.DateTime.UtcNow.AddSeconds(totalSeconds);
+        TimerScreen.rest = IntervalStepper.rest;
+        TimerScreen.work = IntervalStepper.work;
+        TimerScreen.defaultRest = IntervalStepper.rest;
+        TimerScreen.defaultWork = IntervalStepper.work;
+        TimerScreen.rounds = IntervalStepper.rounds;
+        string[] splitTime = totalTimeSec.text.Split(':');
+        int min = System.Convert.ToInt32(splitTime[0]);
+        int sec = System.Convert.ToInt32(splitTime[1]);
+        int totalSeconds = sec + (min * 60);
+        TimerScreen.TimeFinished = System.DateTime.UtcNow.AddSeconds(totalSeconds);
     }
 }
