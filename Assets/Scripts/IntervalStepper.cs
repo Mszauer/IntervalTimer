@@ -26,6 +26,7 @@ public class IntervalStepper : MonoBehaviour {
         if (stepperValue < maxValue) {
             stepperValue += deltaStepper;
             warmUp += deltaStepper;
+            AudioManager.Instance.PlaySound("ButtonClick");
         }
         timer.text = stepperValue.ToString();
         int localtotalSecVal = totalSecVal * rounds + warmUp + coolDown;
@@ -37,6 +38,7 @@ public class IntervalStepper : MonoBehaviour {
         if (stepperValue > minValue) {
             stepperValue -= deltaStepper;
             warmUp -= deltaStepper;
+            AudioManager.Instance.PlaySound("ButtonClick");
         }
         timer.text = stepperValue.ToString();
         int localtotalSecVal = totalSecVal * rounds + warmUp + coolDown;
@@ -48,6 +50,7 @@ public class IntervalStepper : MonoBehaviour {
         if (stepperValue < maxValue) {
             stepperValue += deltaStepper;
             coolDown += stepperValue;
+            AudioManager.Instance.PlaySound("ButtonClick");
         }
         timer.text = stepperValue.ToString();
         int localtotalSecVal = totalSecVal * rounds + warmUp + coolDown;
@@ -59,6 +62,7 @@ public class IntervalStepper : MonoBehaviour {
         if (stepperValue > minValue) {
             stepperValue -= deltaStepper;
             coolDown -= deltaStepper;
+            AudioManager.Instance.PlaySound("ButtonClick");
         }
         timer.text = stepperValue.ToString();
         int localtotalSecVal = totalSecVal * rounds + warmUp + coolDown;
@@ -76,6 +80,7 @@ public class IntervalStepper : MonoBehaviour {
         if (stepperValue < maxValue) {
             stepperValue += deltaStepper;
             totalSecVal += deltaStepper;
+            AudioManager.Instance.PlaySound("ButtonClick");
         }
         timer.text = stepperValue.ToString();
         int localtotalSecVal = totalSecVal * rounds + warmUp + coolDown;
@@ -87,6 +92,7 @@ public class IntervalStepper : MonoBehaviour {
         if (stepperValue > minValue) {
             stepperValue -= deltaStepper;
             totalSecVal -= deltaStepper;
+            AudioManager.Instance.PlaySound("ButtonClick");
         }
         timer.text = stepperValue.ToString();
         int localtotalSecVal = totalSecVal * rounds + warmUp + coolDown;
@@ -96,6 +102,7 @@ public class IntervalStepper : MonoBehaviour {
     }
     public void IncreaseRounds() {
         rounds++;
+        AudioManager.Instance.PlaySound("ButtonClick");
         int localtotalSecVal = totalSecVal * rounds + warmUp + coolDown;
         timer.text = rounds.ToString();
         int minutes = (localtotalSecVal / 60);
@@ -107,6 +114,7 @@ public class IntervalStepper : MonoBehaviour {
         if (rounds <= 0) {
             rounds = 1;
         }
+        AudioManager.Instance.PlaySound("ButtonClick");
         int localtotalSecVal = totalSecVal * rounds + warmUp + coolDown;
         timer.text = rounds.ToString();
         int minutes = (localtotalSecVal / 60);

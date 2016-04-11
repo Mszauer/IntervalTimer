@@ -26,6 +26,7 @@ public class ScreenChanger : MonoBehaviour {
         TimerScreen.defaultRest = IntervalStepper.rest;
         TimerScreen.defaultWork = IntervalStepper.work;
         TimerScreen.rounds = IntervalStepper.rounds;
+        TimerScreen.soundPlay = false;
         string[] splitTime = totalTimeSec.text.Split(':');
         int min = System.Convert.ToInt32(splitTime[0]);
         int sec = System.Convert.ToInt32(splitTime[1]);
